@@ -52,7 +52,10 @@ Unidirectional data flow is used throughout the app.
 
 ## 📸 Screenshots
 
-_Add screenshots here (Home screen, Details screen)_
+<img width="1080" height="2424" alt="movieslist" src="https://github.com/user-attachments/assets/d94e2956-c063-4452-b7f2-8c661bd4bcaa" />   = this image shows the list of movies....
+
+<img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />  = this image shows the moviedetails.....
+
 
 ---
 
