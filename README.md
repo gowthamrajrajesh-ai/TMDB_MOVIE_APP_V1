@@ -12,6 +12,7 @@ This project focuses on clean architecture, proper state management, and modern 
 - Pagination (infinite scrolling)
 - Loading & error state handling
 - Clean UI built with Jetpack Compose
+- Added trailer for the movie that click
 
 ---
 
@@ -36,6 +37,7 @@ The app follows **MVVM (Model–View–ViewModel)** architecture:
 - **ViewModel**: Handles business logic and exposes UI state using `StateFlow`
 - **Repository**: Manages data from remote source (TMDB API)
 - **UiState**: Screen-level immutable state using Kotlin `data class`
+
 
 Unidirectional data flow is used throughout the app.
 
