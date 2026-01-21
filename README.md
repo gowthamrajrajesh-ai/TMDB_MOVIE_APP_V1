@@ -61,9 +61,13 @@ Unidirectional data flow is used throughout the app.
 <img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />  this image shows the moviedetails.....
 
 
-
+---
 
 ## 🎥 Demovideo 
+ https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm
+
+
+---
 
 ## 🚀 Getting Started
 
