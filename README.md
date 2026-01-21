@@ -13,6 +13,8 @@ This project focuses on clean architecture, proper state management, and modern 
 - Loading & error state handling
 - Clean UI built with Jetpack Compose
 - Added trailer for the movie that click
+- Added splash screen
+- implemented dark mode 
 
 ---
 
@@ -59,7 +61,9 @@ Unidirectional data flow is used throughout the app.
 <img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />  this image shows the moviedetails.....
 
 
----
+
+
+## 🎥 Demovideo 
 
 ## 🚀 Getting Started
 
