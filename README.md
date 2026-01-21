@@ -64,7 +64,7 @@ Unidirectional data flow is used throughout the app.
 ---
 
 ## 🎥 Demovideo 
-▶️ Watch Demo Video
+▶️[Watch Demo Video] (https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm)]
 
 ---
 
