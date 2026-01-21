@@ -1,104 +1,118 @@
-# TMDB Movie App 🎬
+TMDB Movie App 🎬
 
-A modern Android movie application built using **Jetpack Compose** and **MVVM architecture**, consuming data from the **TMDB API**.  
+A modern Android movie application built using Jetpack Compose and MVVM architecture, consuming data from the TMDB API.
 This project focuses on clean architecture, proper state management, and modern Android development best practices.
 
----
+📱 Features
 
-## 📱 Features
+Browse popular movies
 
-- Browse popular movies
-- Movie details screen
-- Pagination (infinite scrolling)
-- Loading & error state handling
-- Clean UI built with Jetpack Compose
-- Added trailer for the movie that click
-- Added splash screen
-- implemented dark mode 
+Movie details screen
 
----
+Infinite scrolling with pagination
 
-## 🛠 Tech Stack
+Loading & error state handling
 
-- **Kotlin**
-- **Jetpack Compose**
-- **MVVM Architecture**
-- **StateFlow**
-- **Hilt (Dependency Injection)**
-- **Retrofit**
-- **Coroutines**
-- **TMDB API**
+Clean UI built with Jetpack Compose
 
----
+Movie trailer playback
 
-## 🧱 Architecture
+Splash screen
 
-The app follows **MVVM (Model–View–ViewModel)** architecture:
+Light & Dark mode support
 
-- **UI (Compose)**: Displays state and reacts to user actions
-- **ViewModel**: Handles business logic and exposes UI state using `StateFlow`
-- **Repository**: Manages data from remote source (TMDB API)
-- **UiState**: Screen-level immutable state using Kotlin `data class`
+🛠 Tech Stack
+
+Kotlin
+
+Jetpack Compose
+
+MVVM Architecture
+
+StateFlow
+
+Hilt (Dependency Injection)
+
+Retrofit
+
+Coroutines
+
+TMDB API
+
+🧱 Architecture
+
+The app follows MVVM (Model–View–ViewModel) architecture:
+
+UI (Compose): Displays UI state and handles user interactions
+
+ViewModel: Manages business logic and exposes UI state using StateFlow
+
+Repository: Handles data fetching from the TMDB API
+
+UiState: Immutable screen-level state using Kotlin data class
+
+The app follows unidirectional data flow for better maintainability.
+
+🔄 State Management
+
+UI state managed using StateFlow
+
+Immutable UiState with copy() for updates
+
+Clean handling of loading, success, and error states
+
+Pagination state managed inside the ViewModel
+
+📸 Screenshots
+Movie List Screen
+<img width="300" alt="Movie List Screen" src="https://github.com/user-attachments/assets/d94e2956-c063-4452-b7f2-8c661bd4bcaa" />
+Movie Detail Screen
+<img width="300" alt="Movie Detail Screen" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />
+🎥 Demo Video
+
+▶️ Watch Demo Video
+
+🚀 Getting Started
+
+Clone the repository
+
+git clone https://github.com/gowthamrajrajesh-ai/TMDB_MOVIE_APP_V1.git
 
 
-Unidirectional data flow is used throughout the app.
+Open the project in Android Studio
 
----
+Add your TMDB API key in local.properties
 
-## 🔄 State Management
-
-- UI state is managed using **StateFlow**
-- Immutable `UiState` with `copy()` for updates
-- Loading, success, and error states are handled cleanly
-- Pagination loading is managed within ViewModel
-
----
-
-## 📸 Screenshots
-
-<img width="1080" height="2424" alt="movieslist" src="https://github.com/user-attachments/assets/d94e2956-c063-4452-b7f2-8c661bd4bcaa" />   this image shows the list of movies....
-
-<img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />  this image shows the moviedetails.....
+TMDB_API_KEY=your_api_key_here
 
 
----
+Build and run the app
 
-## 🎥 Demovideo 
- https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm
+🧠 What I Learned
 
+Building modern UI using Jetpack Compose
 
----
+Managing UI state using StateFlow
 
-## 🚀 Getting Started
+Implementing clean MVVM architecture
 
-1. Clone the repository
-2. Add your TMDB API key
-3. Build and run the app in Android Studio
+Handling pagination in Compose
 
----
+Dependency Injection using Hilt
 
-## 🧠 What I Learned
+Writing scalable and maintainable Android code
 
-- Building UI with Jetpack Compose
-- Managing UI state using StateFlow
-- Clean MVVM architecture
-- Pagination handling in Compose
-- Dependency Injection using Hilt
-- Writing scalable and maintainable Android code
+📌 Future Improvements
 
----
+Offline caching using Room
 
-## 📌 Future Improvements
+Search functionality
 
-- Offline caching using Room
-- Search functionality
-- Unit tests for ViewModels
-- UI polish & animations
+Unit tests for ViewModels
 
----
+UI polish and animations
 
-## 👤 Author
+👤 Author
 
-**Gowthamraj**  
-Junior Android Developer
-****
+Gowtham Raj
+Junior Software Developer (Android)
