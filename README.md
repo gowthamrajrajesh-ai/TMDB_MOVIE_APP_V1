@@ -12,7 +12,9 @@ This project focuses on clean architecture, proper state management, and modern 
 - Pagination (infinite scrolling)
 - Loading & error state handling
 - Clean UI built with Jetpack Compose
-- Added trailer for the movie that click
+- Movie trailer playback
+- splash screen
+- Light & Dark mode support
 
 ---
 
@@ -61,6 +63,11 @@ Unidirectional data flow is used throughout the app.
 
 ---
 
+## 🎥 Demovideo 
+▶️[Watch Demo Video](https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm)
+
+---
+
 ## 🚀 Getting Started
 
 1. Clone the repository
@@ -93,4 +100,4 @@ Unidirectional data flow is used throughout the app.
 
 **Gowthamraj**  
 Junior Android Developer
-****
+****   this my readme 
