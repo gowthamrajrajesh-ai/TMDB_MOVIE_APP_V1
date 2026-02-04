@@ -1,103 +1,217 @@
 # TMDB Movie App 🎬
 
-A modern Android movie application built using **Jetpack Compose** and **MVVM architecture**, consuming data from the **TMDB API**.  
-This project focuses on clean architecture, proper state management, and modern Android development best practices.
+A modern Android movie application built using **Jetpack Compose**, **MVVM Architecture**, and **TMDB API**.
+This project focuses on clean architecture, reactive UI using Flow, local caching with Room, and polished user experience with animations and undo actions.
 
 ---
 
 ## 📱 Features
 
-- Browse popular movies
-- Movie details screen
-- Pagination (infinite scrolling)
-- Loading & error state handling
-- Clean UI built with Jetpack Compose
-- Movie trailer playback
-- splash screen
-- Light & Dark mode support
+### 🎥 Movie Browsing
+
+* Browse popular movies from TMDB API
+* Infinite scrolling (pagination)
+* Smooth loading and error state handling
+* Clean grid-based UI using Jetpack Compose
+
+---
+
+### 📄 Movie Details Screen
+
+* Detailed movie information:
+
+  * Overview
+  * Rating
+  * Release date
+  * Language
+  * Popularity
+* Favourite toggle with animated heart icon
+* Trailer playback support
+
+---
+
+### ❤️ Favourite Movies
+
+* Add movies to favourites
+* Remove favourites with **shrink + fade animation**
+* Local persistence using **Room Database**
+* Real-time UI updates using **Kotlin Flow**
+* Snackbar with **Undo delete support**
+
+---
+
+### 🌗 Theme Support
+
+* Light Mode
+* Dark Mode
+* System Default Mode
+* Theme preference saved locally
+
+---
+
+### 🚀 Additional Features
+
+* Splash screen
+* Trailer playback support
+* Modern Material3 UI
+* Smooth Compose animations
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Kotlin**
-- **Jetpack Compose**
-- **MVVM Architecture**
-- **StateFlow**
-- **Hilt (Dependency Injection)**
-- **Retrofit**
-- **Coroutines**
-- **TMDB API**
+### Core
+
+* Kotlin
+* Jetpack Compose
+* MVVM Architecture
+* StateFlow / Flow
+* Hilt (Dependency Injection)
+
+### Networking
+
+* Retrofit
+* TMDB API
+* Coroutines
+
+### Local Storage
+
+* Room Database
+* Kotlin Flow (Reactive DB updates)
+
+### Image Loading
+
+* Coil Compose
+
+### UI & Animation
+
+* AnimatedVisibility
+* Snackbar Undo Action
+* Compose Material3
+* Custom Heart Animation
 
 ---
 
 ## 🧱 Architecture
 
-The app follows **MVVM (Model–View–ViewModel)** architecture:
+The app follows **MVVM (Model–View–ViewModel)** with **Repository Pattern** and Unidirectional Data Flow.
 
-- **UI (Compose)**: Displays state and reacts to user actions
-- **ViewModel**: Handles business logic and exposes UI state using `StateFlow`
-- **Repository**: Manages data from remote source (TMDB API)
-- **UiState**: Screen-level immutable state using Kotlin `data class`
-
-
-Unidirectional data flow is used throughout the app.
+```
+UI (Jetpack Compose)
+        ↓
+ViewModel (StateFlow / UI State)
+        ↓
+Repository
+        ↓
+Remote API (TMDB) + Local Database (Room)
+```
 
 ---
 
 ## 🔄 State Management
 
-- UI state is managed using **StateFlow**
-- Immutable `UiState` with `copy()` for updates
-- Loading, success, and error states are handled cleanly
-- Pagination loading is managed within ViewModel
+* UI state handled using **StateFlow**
+* Immutable UI State using Kotlin `data class`
+* Room database emits reactive updates using Flow
+* UI automatically updates when database changes
+
+---
+
+## ❤️ Favourite Feature Implementation
+
+### Key Highlights
+
+* Favourites stored in a **separate Room table**
+* UI listens to database using Flow
+* Smooth card removal animation using `AnimatedVisibility`
+* Snackbar provides Undo support
+* Clean MVVM separation between UI and Data layer
+
+---
+
+## 🎞 Animations Implemented
+
+### Favourite Removal Animation
+
+* Shrink + Fade exit animation
+* Database update triggered after animation completion
+
+### Favourite Heart Animation
+
+* Scale pop animation
+* Color transition based on favourite state
 
 ---
 
 ## 📸 Screenshots
 
-<img width="1080" height="2424" alt="movieslist" src="https://github.com/user-attachments/assets/d94e2956-c063-4452-b7f2-8c661bd4bcaa" />   this image shows the list of movies....
+### Movie List Screen
 
-<img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />  this image shows the moviedetails.....
-
+<img width="1080" height="2424" alt="movieslist" src="https://github.com/user-attachments/assets/d94e2956-c063-4452-b7f2-8c661bd4bcaa" />
 
 ---
 
-## 🎥 Demovideo 
-▶️[Watch Demo Video](https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm)
+### Movie Details Screen
+
+<img width="1080" height="2424" alt="moviedetail" src="https://github.com/user-attachments/assets/90b245ab-fd0c-4d95-b250-e200fb80b288" />
+
+---
+
+## 🎥 Demo Video
+
+▶️ [Watch Demo Video](https://image2url.com/r2/default/videos/1768995369227-a15d1986-385f-412e-bd57-47e5566d68d9.webm)
 
 ---
 
 ## 🚀 Getting Started
 
 1. Clone the repository
-2. Add your TMDB API key
-3. Build and run the app in Android Studio
+2. Add your TMDB API key in `local.properties`
+3. Build and run the project in Android Studio
 
 ---
 
-## 🧠 What I Learned
+## 🔐 API Key Handling
 
-- Building UI with Jetpack Compose
-- Managing UI state using StateFlow
-- Clean MVVM architecture
-- Pagination handling in Compose
-- Dependency Injection using Hilt
-- Writing scalable and maintainable Android code
+The TMDB API key is stored using `BuildConfig` and excluded from version control.
+
+> In production apps, API keys should be secured via backend or proxy services.
+
+---
+
+## 📚 What I Learned
+
+* Building scalable UI using Jetpack Compose
+* Managing UI state using StateFlow & Flow
+* Implementing Room with reactive UI updates
+* Applying Clean MVVM architecture
+* Implementing animations in Compose
+* Handling pagination efficiently
+* Using Hilt for dependency injection
+* Designing modern Android UI using Material3
 
 ---
 
 ## 📌 Future Improvements
 
-- Offline caching using Room
-- Search functionality
-- Unit tests for ViewModels
-- UI polish & animations
+* Search movies feature
+* Offline caching for movie list
+* Unit testing ViewModels
+* UI testing with Compose Test
+* Improved animation transitions
+* Multi-language support
 
 ---
 
 ## 👤 Author
 
-**Gowthamraj**  
+**Gowthamraj**
 Junior Android Developer
-****   this my readme 
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a star ⭐ on GitHub!
+
+---
