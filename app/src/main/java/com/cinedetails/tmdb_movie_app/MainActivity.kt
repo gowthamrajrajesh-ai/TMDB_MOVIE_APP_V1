@@ -4,6 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.cinedetails.tmdb_movie_app.ui.themeui.MyAppTheme
+import com.cinedetails.tmdb_movie_app.ui.themeui.ThemeViewModel
 import com.cinedetails.tmdb_movie_app.utli.navigation.Navhostroutes
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -13,8 +18,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
-            Navhostroutes()
+            val themeViewModel: ThemeViewModel = hiltViewModel()
+            val themeMode by themeViewModel.themeMode.collectAsState()
+            MyAppTheme(themeMode = themeMode) {
+                Navhostroutes()
+            }
         }
     }
 }

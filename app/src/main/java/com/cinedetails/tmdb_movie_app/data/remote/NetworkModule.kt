@@ -19,7 +19,6 @@ object NetworkModule {
     @Singleton
     fun okhttpclient(): OkHttpClient {
         return OkHttpClient.Builder()
-
             .addInterceptor { chain ->
                 val original= chain.request()
                 val  originalurl= original.url
@@ -34,12 +33,9 @@ object NetworkModule {
                   .build()
                 chain.proceed(request)
             }
-
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level= HttpLoggingInterceptor.Level.BODY
-            })
-
-            .build()
+            }) .build()
     }
 
 
@@ -55,9 +51,8 @@ object NetworkModule {
 
 @Provides
 @Singleton
-fun provideMovieApi(retrofit: Retrofit): MovieApi{
+fun provideMovieApi(retrofit: Retrofit): MovieApi {
     return retrofit.create(MovieApi::class.java)
-
 }
 
 }

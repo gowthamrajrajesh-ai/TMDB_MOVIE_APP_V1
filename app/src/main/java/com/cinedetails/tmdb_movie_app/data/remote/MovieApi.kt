@@ -2,6 +2,7 @@ package com.cinedetails.tmdb_movie_app.data.remote
 
 import com.cinedetails.tmdb_movie_app.data.model.AllMovies
 import com.cinedetails.tmdb_movie_app.data.model.MovieDetails
+import com.cinedetails.tmdb_movie_app.data.model.MovieVideo
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -21,8 +22,15 @@ suspend fun gettopratedmovies(
 ): AllMovies
 
 
-@GET("movie/{MOVIE_ID}?")
+@GET("movie/{movie_id}?")
 suspend fun getmoviedetails(
-    @Path ("MOVIE_ID") movieid: Int
+    @Path ("movie_id") movieid: Int
  ): MovieDetails
+
+@GET("movie/{movie_id}/videos?")
+    suspend fun  getmovievideo(
+        @Path("movie_id") video: Int
+    ): MovieVideo
 }
+
+

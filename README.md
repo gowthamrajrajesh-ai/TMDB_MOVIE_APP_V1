@@ -16,6 +16,30 @@ This project focuses on clean architecture, reactive UI using Flow, local cachin
 
 ---
 
+
+
+
+### 🔍 Movie Search
+
+Real-time movie search by title
+
+Case-insensitive filtering
+
+Search suggestions dropdown
+
+Clickable suggestions for quick selection
+
+Pagination automatically disabled during search
+
+Empty state handling for no results
+
+Fully supports Light and Dark themes
+
+---
+
+
+
+
 ### 📄 Movie Details Screen
 
 * Detailed movie information:
